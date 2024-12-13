@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../css/styles.css">
+    <link rel="stylesheet" href="../css/calendar-event.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+
+    <script>
+        flatpickr("#event-time", {
+            enableTime: true,
+            noCalendar: true,
+            dateFormat: "H:i",
+        });
+    </script>
+</head>
+
+<body>
+    <header>
+        <a href="../index.html">Regoffy</a>
+        <img src="../assets/santa.webp" alt="Santa's Sleigh" class="santa-sleigh">
+    </header>
+
+    <div class="layout">
+        <aside>
+            <nav>
+                <ul class="nav-list">
+                    <li> <a href="event-planner.html"><i class="fas fa-calendar-alt"></i>    Event Scheduler</a></li>
+                    <li><a href="page2.html"><i class="fas fa-utensils"></i>    Meal Planner</a></li>
+                    <li><a href="page3.html"><i class="fas fa-gift"></i>    Gift Tracker</a></li>
+                    <li><a href="page4.html"><i class="fas fa-check-square"></i>    Interactive Checklist</a></li>
+                </ul>
+            </nav>
+        </aside>
+
+        <main>
+            <div id="navigation">
+                <button id="prev-month">Previous</button>
+                <h2 style="padding-left: 20px; padding-right: 20px;" id="current-month-year"></h2>
+                <button id="next-month">Next</button>
+            </div>
+            <div id="calendar"></div>
+
+            <div id="event-modal">
+                <h3>Add Event</h3>
+                <input type="text" id="event-title" placeholder="Event Title">
+                <input type="text" id="event-time" placeholder="Select Time">
+                <button id="save-event">Save Event</button>
+                <button id="close-modal">Cancel</button>
+            </div>
+        </main>
+    </div>
+
+    <footer>
+        <p>&copy; 2024 Jamster. All rights reserved.</p>
+    </footer>
+
+    <script src="../js/calendar.js"></script>
+</body>
+</html>
