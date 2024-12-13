@@ -9,18 +9,18 @@ function listen_event_click() {
     var checklist = document.querySelector('.checklist');
 
     event_scheduler.addEventListener('click', function () {
-        window.location.href = 'event-planner.html';
+        window.location.href = 'html/event-planner.html';
     });
 
     meal_planner.addEventListener('click', function () {
-        window.location.href = 'https:www.google.com';
+        window.location.href = 'html/meal-planner.html';
     });
 
     gift_tracker.addEventListener('click', function () {
-        window.location.href = 'https:www.google.com';
+        window.location.href = 'html/gift-tracker.html';
     });
 
     checklist.addEventListener('click', function () {
-        window.location.href = 'https:www.google.com';
+        window.location.href = 'html/checklist.html';
     });
 }
